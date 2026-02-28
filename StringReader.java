@@ -8,7 +8,7 @@ public class StringReader {
         try(Scanner readerScanner=new Scanner(new FileReader(filePath))){
             while(readerScanner.hasNextLine()){
                 String linea = readerScanner.nextLine().trim();
-                if(!linea.isEmpty()){
+                if(!linea.isEmpty()){//excluye lineas vacias, como enters o espacios, asumiendolas como accidentales. 
                     cadenas.add(linea);
                 }           
             }
